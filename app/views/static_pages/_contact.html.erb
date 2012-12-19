@@ -1,0 +1,40 @@
+<div class="form-all">
+  <%= form_for @message, :url => { :action => "contact" } do |f| %>
+  <ul class="form-section">
+    <li class="form-line" id="id_1">
+      <%= label_tag(:name, "Nombre", :class => 'form-label-top') %>
+      <div id="cid_1" class="form-input-wide">
+        <%= f.text_field :name, :size => 28, :class => 'form-textbox', :placeholder => 'Nombre y apellido' %>
+      </div>
+    </li>
+    <li class="form-line" id="id_2">
+      <%= label_tag(:email, "Email", :class => 'form-label-top') %>
+      <div id="cid_2" class="form-input-wide">
+        <%= f.text_field :email, :size => 28, :class => 'form-textbox', :placeholder => 'nombre@servidor.com' %>
+      </div>
+    </li>
+    <li class="form-line" id="id_3">
+      <%= label_tag(:subject, "Asunto", :class => 'form-label-top') %>
+      <div id="cid_3" class="form-input-wide">
+        <%= f.text_field :subject, :size => 28, :class => 'form-textbox' %>
+      </div>
+    </li>
+    <li class="form-line" id="id_4">
+      <%= label_tag(:body, "Comentario", :class => 'form-label-top') %>
+      <div id="cid_4" class="form-input-wide">
+        <%= f.text_area :body, :size => "62x5", :class => 'form-textarea' %>
+      </div>
+    </li>
+    <li class="form-line" id="id_5">
+      <div id="cid_5" class="form-input-wide">
+          <div class="form-buttons-wrapper">
+            <%= f.submit "Enviar", :class => "form-submit-button" %>
+          </div>
+      </div>
+    </li>
+    <li style="display:none">Should be Empty:>
+      <input type="text" name="website" value="" />
+    </li>
+   </ul>
+  <% end %>
+</div>

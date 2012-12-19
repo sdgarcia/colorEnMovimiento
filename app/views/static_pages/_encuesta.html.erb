@@ -1,0 +1,40 @@
+<%= form_for Vote.new, :action => 'votes/create', :remote => true do |sf| %>
+<div class="form-all">
+  <ul class="form-section">
+    <li id="cid_6" class="form-input-wide">
+      <div class="form-header-group">
+        <h2 id="header_6" class="form-header">Vot&aacute; tu ciudad para que sea elegida para la pr&oacute;xima carrera de Color en Movimiento</h2>
+      </div>
+    </li>
+
+    <li class="form-line" id="id_7">
+      <%= label_tag(:email, "e-mail", :class => 'form-label-top') %>
+      <div id="cid_7" class="form-input-wide">
+        <%= sf.text_field :email, :size => 28, :class => 'form-textbox', :placeholder => 'nombre@servidor.com' %>
+      </div>
+    </li>        	
+    <li class="form-line" id="id_8">
+      <%= label_tag(:city, "ciudad", :class => 'form-label-top') %>
+      <div id="cid_8" class="form-input-wide">
+        <%= sf.collection_select(:city_id, City.all, :id, :name, {:prompt => 'Elegí una ciudad'} ) %>
+      </div>
+    </li>   
+    <li class="form-line" id="id_9">
+      <%= label_tag(:other, "otra", :class => 'form-label-top') %>
+      <div id="cid_9" class="form-input-wide">
+        <%= sf.text_field :other, :size => 28, :class => 'form-textbox', :placeholder => 'Tandil, Buenos Aires' %>
+      </div>
+    </li>    
+    <li class="form-line" id="id_10">
+      <div id="cid_10" class="form-input-wide">
+          <div class="form-buttons-wrapper">
+            <%= sf.submit "Enviar", :class => "form-submit-button" %>
+          </div>
+      </div>
+    </li>
+    <li style="display:none">Should be Empty:>
+      <input type="text" name="website" value="" />
+    </li>
+  </ul>
+</div>
+<% end %>

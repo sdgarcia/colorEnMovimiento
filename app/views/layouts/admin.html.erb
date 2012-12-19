@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color En Movimiento::Admin</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag :application %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to image_tag("logo.jpg", alt:"Color En Movimiento"), "#", {:width =>"260", :height => "59"} %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><% if current_user %>
+                Bienvenido <%= current_user.name %> <%= link_to "Logout", '/logout' %>
+                <% end %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

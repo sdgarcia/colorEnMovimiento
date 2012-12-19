@@ -1,0 +1,110 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.iosSlider').iosSlider({
+			scrollbar: true,
+			autoSlide: true,
+			snapToChildren: true,
+			desktopClickDrag: true,
+			scrollbarLocation: 'top',
+			scrollbarMargin: '10px 10px 0 10px',
+			scrollbarBorderRadius: '0',
+			responsiveSlideWidth: true,
+			navSlideSelector: $('.iosSliderButtons .button'),
+			infiniteSlider: true,
+			startAtSlide: '1',
+			onSlideChange: slideContentChange,
+			onSlideComplete: slideContentComplete,
+			onSliderLoaded: slideContentLoaded
+		});
+
+		function slideContentChange(args) {
+			/* indicator */
+			$(args.sliderObject).parent().find('.iosSliderButtons .button').removeClass('selected');
+			$(args.sliderObject).parent().find('.iosSliderButtons .button:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');			
+		}
+
+		function slideContentComplete(args) {
+			/* animation */
+			$(args.sliderObject).find('.text1, .text2').attr('style', '');
+			
+			$(args.currentSlideObject).children('.text1').animate({
+				right: '100px',
+				opacity: '1'
+			}, 400, 'easeOutQuint');
+			
+			$(args.currentSlideObject).children('.text2').delay(200).animate({
+				right: '50px',
+				opacity: '1'
+			}, 400, 'easeOutQuint');
+		}
+
+		function slideContentLoaded(args) {
+			/* animation */
+			$(args.sliderObject).find('.text1, .text2').attr('style', '');
+			
+			$(args.currentSlideObject).children('.text1').animate({
+				right: '100px',
+				opacity: '1'
+			}, 400, 'easeOutQuint');
+			
+			$(args.currentSlideObject).children('.text2').delay(200).animate({
+				right: '50px',
+				opacity: '1'
+			}, 400, 'easeOutQuint');
+			
+			/* indicator */
+			$(args.sliderObject).parent().find('.iosSliderButtons .button').removeClass('selected');
+			$(args.sliderObject).parent().find('.iosSliderButtons .button:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+		}
+	});
+</script>
+
+<script>
+$(document).ready(function(){
+	$('a').click(function(){
+		var el = $(this).attr('href');
+		var elWrapped = $(el);
+		scrollToDiv(elWrapped,120);
+		return false;
+	});
+	
+	function scrollToDiv(element,navheight){
+		var offset = element.offset();
+		var offsetTop = offset.top;
+		var totalScroll = offsetTop-navheight;
+		
+		$('body,html').animate({
+				scrollTop: totalScroll
+		}, 500);
+	}
+});
+
+</script>
+
+<script>
+$(function () {
+    /* set variables locally for increased performance */
+    var scroll_timer;
+    var displayed = false;
+    var $message = $('#gototop a');
+    var $window = $(window);
+    var top = $(document.body).children(0).position().top;
+
+    /* react to scroll event on window */
+    $window.scroll(function () {
+        window.clearTimeout(scroll_timer);
+        scroll_timer = window.setTimeout(function () {
+            if($window.scrollTop() <= top)
+            {
+                displayed = false;
+                $message.fadeOut(600);
+            }
+            else if(displayed == false)
+            {
+                displayed = true;
+                $message.stop(true, true).show().click(function () { $message.fadeOut(600); });
+            }
+        }, 100);
+    });
+});
+</script>

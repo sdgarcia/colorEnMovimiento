@@ -1,0 +1,232 @@
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+	<div id="wrap">
+		
+		<%= render 'static_pages/header' %>
+        
+        <div class = 'iosSlider'>
+
+			<div class = 'slider'>
+			
+				<div class = 'item' id = 'item1'>
+					
+					<div class = 'text1'><span>Los 5K m&aacute;s divertidos de tu vida</span></div>
+									
+				</div><!--ITEM-->
+				
+				<div class = 'item' id = 'item2'>
+				
+					<div class = 'text1'><span>Los 5K m&aacute;s divertidos de tu vida</span></div>
+					
+					<!--<div class = 'text2'><span>Respond to change in browser<br />width and adjust automatically</span></div>-->
+					
+				</div><!--ITEM-->
+				
+				<div class = 'item' id = 'item3'>
+				
+					<div class = 'text1'><span>Los 5K m&aacute;s divertidos de tu vida</span></div>
+					
+					<!--<div class = 'text2'><span>Run multiple sliders on<br />the same web page</span></div>-->
+				
+				</div><!--ITEM-->
+				
+				<div class = 'item' id = 'item4'>
+				
+					<div class = 'text1'><span>Los 5K m&aacute;s divertidos de tu vida</span></div>
+					
+					<!--<div class = 'text2'><span>Set momentum, elasticity,<br />scrollbars and more...</span></div>-->
+				
+				</div><!--ITEM-->
+			
+			</div><!--SLIDER-->
+			
+			<div class = 'iosSliderButtons'>
+				<div class = 'button'></div>
+				<div class = 'button'></div>
+				<div class = 'button'></div>
+				<div class = 'button'></div>
+			</div><!--IOSSLDER BUTTONS-->
+		
+		</div><!--IOS SLIDER-->
+        
+        <div id="encuesta">
+        	<%= render '/static_pages/encuesta' %>
+        </div><!--ENCUESTA-->
+        
+        <div id="frase">
+        	<h4>Estamos buscando ciudades con actitud para hacer Color en Movimiento. Vot&aacute; la tuya!</h4>        
+        </div><!--FRASE-->
+        
+        <div id="video">
+        	<h3>Esto va a pasar. No te lo pierdas.</h3>
+            <iframe id="vimeo" src="http://player.vimeo.com/video/53934341?badge=0" width="440" height="247" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </div><!--VIDEO-->
+              
+        <div id="postulate">
+        	<a href="#voluntarios"><div class="reminders uno">
+            	<span class="first">Postulate como voluntario y s&eacute; miembro de COLORGANG.</span>
+            </div></a>
+            
+            <a href="#porque"><div class="reminders dos">
+            	<span class="second">¿Sab&iacute;as que Color en Movimiento se hace a beneficio de diferentes ONGs dentro del municipio donde se organiza la carrera?</span>
+            </div></a>
+            
+            <a href="#faq"><div class="reminders tres">
+            	<span class="third">Al final de la carrera te espera un festival de colores. Festejemos juntos por el camino recorrido.</span>
+            </div></a>
+            	
+            
+        </div><!--POSTULATE-->
+        
+        <div id="twitter">
+        	<ul id="twitter_update_list">
+            	<li>&nbsp;</li>
+			</ul>
+		</div><!--TWITTER-->
+              
+        <div id="que">
+	       	<h3>¿Qu&eacute; es?</h3>
+            <p>Para Color en Movimiento, la felicidad se encuentra en el viaje y no s&oacute;lo en el destino. ¿Es importante llegar? S&iacute;, pero lo m&aacute;s importante es disfrutar, divertirse, llenarse de cosas buenas y estar alegres mientras avanzamos.</p>
+
+			<p>Color en Movimiento es una experiencia &uacute;nica enfocada en la diversi&oacute;n, la salud, la m&uacute;sica y los buenos momentos con amigos y familiares. Son 5K y cada kil&oacute;metro representa un color: fucsia, verde, amarillo, azul y naranja. Por eso, cuando un corredor alcanza alguna zona de color, inmediatamente es bombardeado por nuestros voluntarios con un color.</p>
+
+			<p>La idea es comenzar de blanco y terminar completamente empapado de colores. Ac&aacute; no importa la edad, el peso, el entrenamiento f&iacute;sico o el tiempo que tardes en llegar a la meta, no hay ganadores ni perdedores, s&oacute;lo hay felicidad y muchos muchos colores.</p>
+			<%= image_tag "roll1.png", :width => "229", :height => "401" %>
+        </div><!--QUE-->
+        
+        <div id="porque">
+	       	<h3>¿Por qu&eacute; lo hacemos?</h3>
+            <p>Este proyecto busca mejorar la calidad de vida de todas las personas: de aquellas que participan, de aquellas que colaboran, y de aquellas que necesitan nuestra ayuda.</p>
+
+			<p>Por eso, toda la ganancia ser&aacute; donada a distintas ONGs situadas en la ciudad donde se realice Color en Movimiento. Las ONGs van a acceder a este dinero sin tener que involucrarse en la organizaci&oacute;n de la marat&oacute;n y sin desconcentrarse de su tarea principal, que es la que realmente importa: mejorar el mundo.</p>
+
+			<p>Vot&aacute; tu ciudad, corr&eacute; los 5K m&aacute;s divertidos de tu vida y ayud&aacute; a las ONGs que te rodean!</p>
+			<%= image_tag "roll2.png", :width => "229", :height => "401" %>
+        </div><!--PORQUE-->
+             
+        <div id="voluntarios">
+	       	<h3>Voluntarios</h3>
+            <p>Quer&eacute;s ayudarnos y ser parte de Color en Movimiento? Esta es tu oportunidad. Postulate para ser miembro de COLORGANG. Pod&eacute;s ser parte de la organizaci&oacute;n de las carreras y/o encargarte de bombardear con colores a los corredores, bailarines y caminantes de Color en movimiento.</p>
+			<p>Es muy simple, apunt&aacute;s, tir&aacute;s y te divert&iacute;s. Si sent&iacute;s que hay un color que te identifique m&aacute;s avisanos as&iacute; te sumamos a tu equipo con otros fan&aacute;ticos del mismo color.</p>
+			<p>Para enterarte m&aacute;s complet&aacute; el <a href="#contacto">formulario de contacto</a> poniendo como asunto COLORGANG.</p>
+			<%= image_tag "roll4.png", :width => "230", :height => "225" %>
+        </div><!--VOLUNTARIOS-->
+        
+        <div id="faq">
+	       	<h3>FAQ</h3>
+            
+            <h5>¿Tengo que estar entrenado para participar de la carrera?</h5>
+			<p>No! Lo importante en Color en Movimiento es llegar a los 5K disfrutando del camino con amigos o familia. Se puede hacer corriendo, caminando, saltando, bailando o gateando si se quiere!</p>
+			
+            <h5>¿Hay un solo ganador?</h5>
+			<p>No, son 5K participativos, para Color en Movimiento todos son ganadores. Para nosotros, ganar es divertirse y ayudar a los que nos rodean.</p>
+			
+            <h5>¿Puedo ir con mis hijos?</h5>
+			<p>S&iacute;! No hay restricciones de edad. Los menores de 5 a&ntilde;os entran gratis y no hace falta registrarlos.</p>
+            
+            <h5>¿Puedo ir con mi mascota?</h5>
+			<p>No, perd&oacute;n a nuestros amigos fieles, pero no tendr&aacute;n permitido el acceso.</p>
+            
+            <h5>¿Se toma la hora de llegada a la meta?</h5>
+			<p>No! En Color en Movimiento creemos que es una buena idea olvidarnos por un momento del reloj. Si alg&uacute;n participante quisiera cronometrar su carrera deber&aacute; hacerlo individualmente.</p>
+            
+            <h5>¿Qu&eacute; nos espera al llegar a la meta?</h5>
+			<p>Un gran festival de colores con m&uacute;sica y mucha gente divertida! Preparate para bailar, cantar, saltar, sacar fotos, filmar y sonreir. Es un momento para felicitarte ya que llegaste a la meta y disfrutaste cada paso.</p>
+            
+            <h5>¿Qu&eacute; se hace con los fondos recaudados?</h5>
+			<p>La ganancia ser&aacute; donada a ONG’S que operen dentro del municipio en donde se lleve a cabo la carrera.</p>
+            
+            <h5>¿Hay alg&uacute;n paquete que tengo que tener antes de la carrera?</h5>
+			<p>S&iacute;! En cuanto se realiza la inscripci&oacute;n y se efect&uacute;a el pago se enviar&aacute; la informaci&oacute;n detallada de cu&aacute;ndo y d&oacute;nde se entregar&aacute; el paquete!</p>
+            
+            <h5>¿C&oacute;mo debo ir vestido?</h5>
+			<p>Color en Movimiento entrega dentro del paquete una remera blanca aunque pod&eacute;s usar otra. La idea es empezar de blanco y terminar empapado de color. A pesar de que los colores salen de la ropa y zapatillas, recomendamos llevar ropa que no les moleste que pueda ser pintada. Nos encantan los disfraces, mientras m&aacute;s locos mejor.</p>
+            
+            <h5>¿Puedo mandar a alguien a buscar el paquete en mi lugar?</h5>
+			<p>Siempre y cuando se encuentre autorizado con anticipaci&oacute;n si! Asegurate de contactarnos y te daremos los pasos a seguir.</p>
+            
+            <h5>¿Puedo ser s&oacute;lo voluntario?</h5>
+			<p>Claro que s&iacute;! Postulate en el link de contacto para ser voluntario poniendo como asunto COLORGANG. Ojo! Ac&aacute; s&iacute; necesitamos que tengas m&aacute;s de 18 a&ntilde;os.</p>
+            
+            <h5>¿C&oacute;mo se colorea a la gente?</h5>
+			<p>Esta es nuestra pregunta preferida! Tendr&aacute;n que participar de la carrera para enterarse!</p>
+            
+            <h5>¿Y si no quiero participar sin saber la pregunta anterior?</h5>
+			<p>Entonces les decimos: Los mismos participantes tendr&aacute;n una bolsita con colores para el festival de colores y habr&aacute; zonas de colores en donde voluntarios te estar&aacute;n tirando los colores. Si se quiere, tambi&eacute;n podr&aacute;n comprar m&aacute;s bolsas de colores.</p>
+            
+            <h5>¿Los colores duelen o hacen arder los ojos o tienen feo gusto?</h5>
+			<p>No! Usamos colorantes 100% seguros y aptos para el consumo. Ninguno de ellos afectar&aacute; la respiraci&oacute;n, la piel o la visi&oacute;n de los participantes. Apoyamos el uso de anteojos y bandanas o pa&ntilde;uelos para protegerse!</p>
+            
+            <h5>¿Los colores manchan la piel para siempre?</h5>
+			<p>S&iacute;. Pensamos que ser&iacute;a divertido vivir en un mundo lleno de hombres y mujeres de colores.</p>
+            
+            <h5>¿Es en serio la pregunta anterior?</h5>
+			<p>No. Los colores salen de la piel y la ropa con agua. Cuantos m&aacute;s lavados mejor! Aconsejamos sacarse el polvo en las zonas de limpieza al final de la carrera antes de ba&ntilde;arse.</p>
+            
+            <h5>¿Los colores ensuciar&aacute;n los autos?</h5>
+			<p>S&iacute;. Recomendamos llevar toallas para sacar el polvo y sentirnos un poquito m&aacute;s de vacaciones. Si se puede ir en bici, much&iacute;simo mejor!</p>
+            
+            <h5>¿Puedo llevar c&aacute;mara de fotos y/o tel&eacute;fono celular?</h5>
+			<p>Por supuesto! Motivamos el uso excesivo de todo aparato para sacar fotos y filmar. Despu&eacute;s compartilo con nosotros en las redes sociales. Aconsejamos envolverlos en alg&uacute;n material pl&aacute;stico para evitar que se da&ntilde;en. Color en Movimiento no se hace responsable de los elementos de valor de los participantes.</p>
+            
+            <h5>¿Hacen reembolsos?</h5>
+			<p>Lamentablemente no. No queremos que se arrepientan.</p>
+            
+            <h5>¿Si tengo una pregunta s&uacute;per importante que no est&aacute; dentro de las anteriores qu&eacute; hago?</h5>
+			<p>Pod&eacute;s enviarnos tu pregunta a hola@colorenmovimiento.com y te contestaremos a la brevedad!!</p>
+            
+		</div><!--FAQ-->
+        
+        <div id="contacto">
+	       	<h3>Contacto</h3>
+            <p>Escribinos por cualquier duda, consulta, sugerencia, idea o dato de color.</p>
+            <p>Tambi&eacute;n pod&eacute;s postularte como voluntario poniendo como asunto COLORGANG.</p>
+			<%= render 'static_pages/contact' %>
+			<%= image_tag "roll3.png", :width => "230", :height => "442" %>
+        </div><!--Contacto-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<ul>
+    <li id="gototop"><a href="#wrap">Ir Arriba</a></li>
+    </ul>
+	</div><!--WRAP-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36352346-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/colorenmov.json?callback=twitterCallback2&count=1"></script>
+</body>
