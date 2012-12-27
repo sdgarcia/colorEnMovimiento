@@ -1,3 +1,4 @@
+#encoding: utf-8
 class VotesController < ApplicationController
   
   # GET /votes/new
@@ -27,13 +28,10 @@ class VotesController < ApplicationController
     respond_to do |format|
       if @vote.save
         format.html { redirect_to '/', notice: 'gracias por tu voto!' }
-        format.js #{ render json: @vote, status: :created, location: @vote }
+        format.js {render :text => "OK" } 
       else
         format.html { redirect_to '/', notice: 'gracias por tu voto!' }
-        #format.html { render :action => 'static_pages/home', notice: 'no se pudo votar' }
-        format.js   { render 'error.js.erb' }
-        # format.js { render action: "static_pages/home", notice: 'no se pudo realizar su voto' }
-        # format.json { render json: @vote.errors, status: :unprocessable_entity }
+        format.js   { render :text => "Por favor, verficá tu email. No se pudo realizar tu voto" }
       end
     end
   end

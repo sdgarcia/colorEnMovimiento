@@ -1,3 +1,14 @@
+<script type="text/javascript">
+jQuery(function(){
+  jQuery('#new_vote').on('ajax:complete', function(evt,xhr,status){
+      if(xhr.responseText=="OK")
+        alert("Gracias por tu voto!");
+      else
+        alert(xhr.responseText);
+  });
+});
+</script>
+
 <%= form_for Vote.new, :action => 'votes/create', :remote => true do |sf| %>
 <div class="form-all">
   <ul class="form-section">
