@@ -43,7 +43,7 @@ class CitiesController < ApplicationController
   # POST /cities.json
   def create
     @city = City.new(params[:city])
-
+    @city.enabled = true
     respond_to do |format|
       if @city.save
         format.html { redirect_to cities_path, notice: 'nueva ciudad creada!' }
@@ -77,6 +77,9 @@ class CitiesController < ApplicationController
     @city = City.find(params[:id])
     @city.destroy
 
+    if @city.errors.size > 0
+      flash[:alert] = "No se puede eliminar, tiene votos."
+    end
     respond_to do |format|
       format.html { redirect_to cities_url }
       format.json { head :no_content }
