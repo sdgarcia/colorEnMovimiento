@@ -10,4 +10,5 @@ ColorEnMovimiento::Application.routes.draw do
   match 'votes_admin' => 'votes_admin#index', :via => :get
   get '/logout', :to => 'sessions#destroy'
   get '/admin', :to => 'admin#home'
+  get '/admin/:action', :to => 'admin'
 end
