@@ -1,5 +1,19 @@
+<script type="text/javascript">
+jQuery(function(){
+  jQuery('#new_message').on('ajax:complete', function(evt,xhr,status){
+    //eval(xhr.responseText);
+    jQuery("#new_message input.form-submit-button")[0].disabled=false;
+    jQuery("#new_message input.form-submit-button").val("Enviar"); 
+  });
+  jQuery("#new_message").on("ajax:beforeSend", function(){ 
+    jQuery("#new_message input.form-submit-button")[0].disabled=true;
+    jQuery("#new_message input.form-submit-button").val("Enviando..."); 
+  })
+});
+</script>
+
 <div class="form-all">
-  <%= form_for @message, :url => { :action => "contact" } do |f| %>
+  <%= form_for @message, :url => { :action => "contact" }, :remote => true do |f| %>
   <ul class="form-section">
     <li class="form-line" id="id_1">
       <%= label_tag(:name, "Nombre", :class => 'form-label-top') %>
