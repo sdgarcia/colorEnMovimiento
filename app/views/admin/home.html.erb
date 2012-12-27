@@ -8,9 +8,9 @@
     <th>Ciudad</th>
     <th>Votos<th>
   </tr>
-  <% @votes.each do |vote| %>
+  <% @votes.sort_by {|e| -e[1] }.each do |vote| %>
   <tr>
-    <td><%= City.find(vote[0]).name %></td>
+    <td><%= City.exists?(vote[0]) ? City.find(vote[0]).name : "N/A" %></td>
     <td style="text-align:right"><% if (vote[0] == 6) %> 
       <%= @votes_other %>
       <% else %>
@@ -20,8 +20,8 @@
   </tr>
    <% end %>
    <tr>
-    <td>Total</td>
-    <td style="text-align:right"><%= @total_votes %></td>
+    <td><strong>Total</strong></td>
+    <td style="text-align:right"><strong><%= @total_votes %></strong></td>
     <td><%= link_to "Detalle", :controller => "votes_admin", :action => "index" %></td>
    </tr>
  </table>
