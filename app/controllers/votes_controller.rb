@@ -31,7 +31,7 @@ class VotesController < ApplicationController
         format.js {render :text => "OK" } 
       else
         format.html { redirect_to '/', notice: 'gracias por tu voto!' }
-        format.js   { render :text => "Por favor, verficá tu email. No se pudo realizar tu voto" }
+        format.js   { render :text => "Voto repetido o e-mail inválido. No se pudo realizar tu voto" }
       end
     end
   end

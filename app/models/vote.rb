@@ -4,5 +4,7 @@ class Vote < ActiveRecord::Base
 
   validates :email, :format => { :with => %r{.+@.+\..+} }, :allow_blank => false 
 
-
+  validates_uniqueness_of :city_id, :scope => :email
+  validates_uniqueness_of :other, :scope => :email
+  
 end
