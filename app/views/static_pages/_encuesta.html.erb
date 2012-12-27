@@ -27,7 +27,7 @@ jQuery(function(){
     <li class="form-line" id="id_8">
       <%= label_tag(:city, "ciudad", :class => 'form-label-top') %>
       <div id="cid_8" class="form-input-wide">
-        <%= sf.collection_select(:city_id, City.all, :id, :name, {:prompt => 'Elegí una ciudad'} ) %>
+        <%= sf.collection_select(:city_id, City.where(:enabled => true), :id, :name, {:prompt => 'Elegí una ciudad'} ) %>
       </div>
     </li>   
     <li class="form-line" id="id_9">
