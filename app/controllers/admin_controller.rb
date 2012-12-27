@@ -23,4 +23,20 @@ class AdminController < ApplicationController
   	render :text => c
   end #csv
 
+   def csv_votos
+  	require 'csv'
+
+	c = CSV.generate do |csv| 
+    	Vote.all.each do |vote|
+      		csv << [ vote.email, vote.city_id, (vote.city.name if vote.city) , vote.other ]
+    	end
+  	end
+
+	headers['Content-Type'] = "text.csv"
+	headers['Content-Disposition'] = 'attachment; filename="Mails.xls"'
+	headers['Cache-Control'] = ''
+
+  	render :text => c
+  end #csv
+
 end
