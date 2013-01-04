@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     if session[:user_id].blank? 
     	redirect_to '/auth/google'
     else 
-    	unless session[:user_id].uid == "sebastian.garcia@tangeret.com" or session[:user_id].uid =="franco@colorenmovimiento.com" or session[:user_id].uid == "akina@colorenmovimiento.com" 
+    	unless session[:user_id].uid == "sebastian.garcia@tangeret.com" or session[:user_id].uid =="franco@colorenmovimiento.com" or session[:user_id].uid == "akina@colorenmovimiento.com" or session[:user_id].uid == "ceneon@gmail.com" 
     		redirect_to '/failure'
     	end
     end
