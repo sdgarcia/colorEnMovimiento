@@ -4,6 +4,7 @@ ColorEnMovimiento::Application.routes.draw do
   match '/auth/google/callback', to: 'sessions#create'
   match '/' => 'static_pages#home', :via => :get
   match '/' => 'static_pages#contact', :via => :post
+  match '/inscripcion' => 'static_pages#inscripcion'
   match '/votes' => 'votes#create', :via => :post
   match '/votes' => 'votes_admin#index', :via => :get
   match 'votes_admin/:id' => 'votes_admin#detail', :via => :get

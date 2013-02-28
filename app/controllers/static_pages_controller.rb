@@ -18,4 +18,11 @@ class StaticPagesController < ApplicationController
 		end
     end
   end
+
+  def inscripcion
+
+
+  end #inscripcion
+
+  
 end
