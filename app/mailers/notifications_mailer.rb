@@ -1,5 +1,5 @@
 class NotificationsMailer < ActionMailer::Base
-  default :from => "noreply@ColorEnMovimiento.com"
+  default :from => "franco@colorenmovimiento.com"
   default :to => "hola@ColorEnMovimiento.com"
 
   def new_message(message)
