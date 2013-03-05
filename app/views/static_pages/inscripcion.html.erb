@@ -71,91 +71,77 @@
 				<p>Para enterarte m&aacute;s complet&aacute; el formulario.</p>
 				<img src="/assets/roll4.png" width="230" height="225" />
 	            
-	            <form class="volMain">
+	            <%= form_for @volunteer, :url => "/volunteers/new", :method => "post", :remote => true, :html =>{ :class => "volMain"} do |f| %>
 					<div class="form-all">
 						<ul class="form-section">
 												
 							<li class="form-line">
 								<label> Nombre </label>
 								<div>
-									<input type="text" size="28" name="name" class="form-textbox">
+									<%= f.text_field :name, :class => "form-textbox" %>
 								</div>
 							</li>
 							
 							<li class="form-line">
 								<label> Apellido </label>
 								<div>
-									<input type="text" size="28" name="last_name" class="form-textbox">
+									<%= f.text_field :last_name, :class => "form-textbox" %>
 								</div>
 							</li>
 							
 							<li class="form-line">
 								<label> Email </label>
 								<div>
-									<input type="text" placeholder="nombre@servidor.com" size="28" name="email" class="form-textbox">
+									<%= f.text_field :email, :class => "form-textbox", :placeholder => "nombre@servidor.com" %>
 								</div>
 							</li>
 							
 							<li class="form-line">
 								<label> Ciudad </label>
 								<div>
-									<input type="text" size="28" name="ciudad" class="form-textbox">
+									<%= f.text_field :ciudad, :class => "form-textbox" %>
 								</div>
 							</li>
 							
 							<li class="form-line">
 								<label> Provincia / Estado </label>
 								<div>
-									<input type="text" size="28" name="provEstado" class="form-textbox">
+									<%= f.text_field :provestado, :class => "form-textbox" %>
 								</div>
 							</li>
 							
 							<li class="form-line">
 								<label> Pa&iacute;s </label>
 								<div>
-									<input type="text" size="28" name="pais" class="form-textbox">
+									<%= f.text_field :pais, :class => "form-textbox" %>
 								</div>
 							</li>
 							
 							<li class="form-line">
 								<label> Sos voluntario en otra Organizaci&oacute;n sin fines de lucro? cu&aacute;l? </label>
 								<div>
-									<input type="text" size="28" name="cual" class="form-textbox">
+									<%= f.text_field :cual, :class => "form-textbox" %>
 								</div>
 							</li>
 							
 							<li class="form-line">
 								<label> Qu&eacute; tipo de voluntario quer&eacute;s ser? </label>
 								<div>
-									<select name="tipo">
-										<option value="1">Voluntario en el d&iacute;a de la carrera - Organizando y ayudando a los participantes.</option>
-										<option value="2">Voluntario en el d&iacute;a de la carrera - Entreteniendo y motivando.</option>
-										<option value="3">Voluntario para repartir los kits de participantes una semana antes de la carrera.</option>
-										<option value="4">Voluntario para organizar la carrera en mi ciudad.</option>
-										<option value="5">Voluntario en comunicaci&oacute;n del proyecto.</option>
-										<option value="6">Voluntario como fot&oacute;grafo para el d&iacute;a de la carrera.</option>
-										<option value="7">Voluntario como fot&oacute;grafo para eventos previos a la carrera.</option>
-										<option value="8">Otro.</option>
-									</select>
+									<%= f.select :tipo, [ ["Voluntario en el día de la carrera - Organizando y ayudando a los participantes.", "1"], ["Voluntario en el día de la carrera - Entreteniendo y motivando.", "2"], ["Voluntario para repartir los kits de participantes una semana antes de la carrera.", "3"], ["Voluntario para organizar la carrera en mi ciudad.", "4"], ["Voluntario en comunicación del proyecto.", "5"], ["Voluntario como fotógrafo para el día de la carrera.", "6"], ["Voluntario como fotógrafo para eventos previos a la carrera.", "7"], ["Otro.", "8"] ] %>
 								</div>
 							</li>
 							
 							<li class="form-line">
 								<label> Color </label>
 								<div>
-									<select name="tipo">
-										<option value="1">Azul</option>
-										<option value="2">Amarillo</option>
-										<option value="3">Verde</option>
-										<option value="4">Fucsia</option>
-									</select>
+									<%= f.select :color, [ ["Azul", "Azul"], ["Amarillo", "Amarillo"], ["Verde", "Verde"], ["Fucsia", "Fucsia"] ] %>
 								</div>
 							</li>                 
 			  
 							<li class="form-line">
 								<label> Contanos un poco m&aacute;s de vos (habilidades, disponibilidad horaria, contactos, facilidades, etc) </label>
 									<div>
-										<textarea class="form-textarea" name="contanos" cols="62" rows="5"></textarea>
+										<%= f.text_area :contanos, :class => "form-textarea", :cols => "62", :rows => "5" %>
 									</div>
 							</li>
 			  
@@ -168,7 +154,8 @@
 							</li>
 						</ul>
 					</div>
-				</form>
+				<% end #form 
+				%>
 		</div><!--VOLUNTARIOS-->
 	        
 

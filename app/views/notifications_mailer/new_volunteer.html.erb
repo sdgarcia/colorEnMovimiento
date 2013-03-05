@@ -1,0 +1,17 @@
+<h2>Nuevo voluntario</h2>
+
+<p>Nombre: <strong><%= @volunteer.name %></strong></p>
+<p>Apellido: <strong><%= @volunteer.last_name %></strong></p>
+<p>E-mail: <strong><%= @volunteer.email %></strong></p>
+<p>Ciudad: <strong><%= @volunteer.ciudad %></strong></p>
+<p>Provincia: <strong><%= @volunteer.provestado %></strong></p>
+<p>País: <strong><%= @volunteer.pais %></strong></p>
+<p>Organización: <strong><%= @volunteer.cual %></strong></p>
+
+<p>Tipo de voluntario: <strong><%= ([ "N/A", "Voluntario en el día de la carrera - Organizando y ayudando a los participantes.", "Voluntario en el día de la carrera - Entreteniendo y motivando.", "Voluntario para repartir los kits de participantes una semana antes de la carrera.", "Voluntario para organizar la carrera en mi ciudad.", "Voluntario en comunicación del proyecto.", "Voluntario como fotógrafo para el día de la carrera.", "Voluntario como fotógrafo para eventos previos a la carrera.", "Otro." ])[@volunteer.tipo.to_i] %></strong></p>
+
+<p>Color: <strong><%= @volunteer.color %></strong></p>
+
+<p>Contanos +: <strong><%= simple_format @volunteer.contanos %></strong></p>
+
+

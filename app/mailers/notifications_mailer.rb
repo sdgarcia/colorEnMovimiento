@@ -7,9 +7,8 @@ class NotificationsMailer < ActionMailer::Base
     mail(:subject => "ColorEnMovimiento #{message.subject} /#{(0...3).map{(65+rand(26)).chr}.join}")
   end
 
-  def new_volunteer()
-
-
+  def new_volunteer(volunteer)
+  	@volunteer = volunteer
   	mail(:subject => "ColorEnMovimiento Voluntarios /#{(0...3).map{(65+rand(26)).chr}.join}")
   end #new_volunteer
 

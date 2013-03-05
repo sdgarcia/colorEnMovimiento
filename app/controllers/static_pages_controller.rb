@@ -21,7 +21,7 @@ class StaticPagesController < ApplicationController
 
   def inscripcion
 
-
+    @volunteer = Volunteer.new
   end #inscripcion
 
   
