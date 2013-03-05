@@ -5,6 +5,8 @@ gem 'omniauth'
 gem 'omniauth-google'
 gem 'bootstrap-sass', '2.1'
 
+gem 'google_drive'
+
 group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'
