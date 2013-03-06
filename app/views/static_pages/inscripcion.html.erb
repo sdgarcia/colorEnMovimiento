@@ -27,7 +27,7 @@
 				  <% @races.each do |race| %>
 				    <tr>
 				      <td><a href="javascript:;" %><%= race.title %></a></td>
-				      <td><%= l race.date, :format => "%d de %B, %Y" %></td>
+				      <td><%= l race.race_date, :format => "%d de %B, %Y" %></td>
 				      <td><a href="javascript:;" %><%= race.status_s.upcase %></a></td>
 				    </tr>
 				  <% end %>
