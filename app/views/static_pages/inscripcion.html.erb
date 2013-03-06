@@ -22,41 +22,16 @@
 				<thead>
 					<tr><th>Carrera</th><th>Fecha</th><th>Inscripci&oacute;n</th></tr>
 				</thead>
-				<tbody>																				<tr>
-						<td><a href="vlopez.html" title="Color en Movimiento &raquo; Vicente L&oacute;pez">Vicente L&oacute;pez, Prov. Buenos Aires</a></td>
-						<td>1 de Marzo, 2013</td>
-						<td><a href="#" title="Color en Movimiento &raquo; Vicente L&oacute;pez">INSCRIBITE</a></td>
-					</tr>
+				<tbody>								
 
-					<tr>
-						<td><a href="#" title="Color en Movimiento &raquo; Vicente L&oacute;pez">Necochea, Prov. Buenos Aires</a></td>
-						<td>10 de Marzo, 2013</td>
-						<td><a href="#" title="Mardi Gras - New Orleans" onclick="_gaq.push(['_trackEvent', 'Locations Table', 'click Reg Open', 'Mardi Gras - New Orleans']);">INSCRIBITE</a></td>
-					</tr>
-
-					<tr>
-						<td><a href="#" title="Color en Movimiento &raquo; Vicente L&oacute;pez">Ciudad de Buenos Aires</a></td>
-						<td>7 de Abril, 2013</td>
-						<td><a href="#" title="Jacksonville" onclick="_gaq.push(['_trackEvent', 'Locations Table', 'click Reg Open', 'Jacksonville']);">AGOTADO</a></td>
-					</tr>
-
-					<tr>
-						<td><a href="#" title="Color en Movimiento &raquo; Vicente L&oacute;pez">Mendoza</a></td>
-						<td>25 de Abril, 2013</td>
-						<td><a href="#" title="Las Vegas" onclick="_gaq.push(['_trackEvent', 'Locations Table', 'click Reg Open', 'Las Vegas']);">AGOTADO</a></td>
-					</tr>
-
-					<tr>
-						<td><a href="#" title="Color en Movimiento &raquo; Vicente L&oacute;pez">Posadas, Misiones</a></td>
-						<td>16 de Julio, 2013</td>
-						<td><a href="#" title="San Francisco" onclick="_gaq.push(['_trackEvent', 'Locations Table', 'click Reg Open', 'San Francisco']);">POSTERGADA</a></td>
-					</tr>
-
-					<tr>
-						<td><a href="#" title="Color en Movimiento &raquo; Vicente L&oacute;pez">Río de Janeiro, Brasil</a></td>
-						<td>20 de Septiembre, 2013</td>
-						<td><a href="#" title="Columbia" onclick="_gaq.push(['_trackEvent', 'Locations Table', 'click Reg Open', 'Columbia']);">INSCRIBITE</a></td>
-					</tr>
+				  <% @races.each do |race| %>
+				    <tr>
+				      <td><a href="javascript:;" %><%= race.title %></a></td>
+				      <td><%= l race.date, :format => "%d de %B, %Y" %></td>
+				      <td><a href="javascript:;" %><%= race.status_s.upcase %></a></td>
+				    </tr>
+				  <% end %>
+				  
 				</tbody>
 			</table>
 	    

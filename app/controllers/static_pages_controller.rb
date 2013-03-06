@@ -22,6 +22,9 @@ class StaticPagesController < ApplicationController
   def inscripcion
 
     @volunteer = Volunteer.new
+
+    @races = Race.where(:status => [1,2,3]).order(:race_date)
+    
   end #inscripcion
 
   
