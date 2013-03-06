@@ -10,6 +10,8 @@ ColorEnMovimiento::Application.routes.draw do
   match 'votes_admin/:id' => 'votes_admin#detail', :via => :get
   match 'votes_admin' => 'votes_admin#index', :via => :get
   match '/volunteers/new' => 'volunteers#new'
+  match '/races(/:action)' => 'races'
+  match '/options(/:action)' => 'options'
   get '/logout', :to => 'sessions#destroy'
   get '/admin', :to => 'admin#home'
   get '/admin/:action', :to => 'admin'
