@@ -1,4 +1,4 @@
-<body>
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -26,9 +26,9 @@
 
 				  <% @races.each do |race| %>
 				    <tr>
-				      <td><a href="javascript:;" %><%= race.title %></a></td>
+				      <td><a href="/carreras/<%= race.id %>" %><%= race.title %></a></td>
 				      <td><%= l race.race_date, :format => "%d de %B, %Y" %></td>
-				      <td><a href="javascript:;" %><%= race.status_s.upcase %></a></td>
+				      <td><a href="/carreras/<%= race.id %>" %><%= race.status_s.upcase %></a></td>
 				    </tr>
 				  <% end %>
 				  
@@ -153,3 +153,4 @@
   })();
 
 </script>
+

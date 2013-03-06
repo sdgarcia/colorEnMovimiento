@@ -27,5 +27,10 @@ class StaticPagesController < ApplicationController
     
   end #inscripcion
 
+  def show_race
+    @race = Race.find(params[:key]) 
+
+  end #show_race
+
   
 end
