@@ -15,11 +15,16 @@
         <div class="container">
           <%= link_to image_tag("logo.jpg", alt:"Color En Movimiento"), "#", {:width =>"260", :height => "59"} %>
           <nav>
-            <ul class="nav pull-right">
-              <li><% if current_user %>
-                Bienvenido <%= current_user.name %> <%= link_to "Logout", '/logout' %>
-                <% end %></li>
-            </ul>
+            <% if current_user %>
+              <ul class="nav pull-right">
+                <li><a href="javascript:;">Bienvenido <%= current_user.name %></a></li>
+                <li><a href="/admin" class="btn"><i class="icon-dashboard"></i> Dashboard</a></li>
+                <li><a href="/cities" class="btn"><i class="icon-home"></i> Ciudades</a></li>
+                <li><a href="/races" class="btn"><i class="icon-trophy"></i> Carreras</a></li>
+                <li><a href="/options" class="btn"><i class="icon-th-list"></i> Opciones</a></li>
+                <li><a href="/logout" class="btn"><i class="icon-signout"></i> Salir</a></li>
+              </ul>
+            <% end %>
           </nav>
         </div>
       </div>
