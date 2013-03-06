@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306144741) do
+ActiveRecord::Schema.define(:version => 20130306160232) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(:version => 20130306144741) do
   create_table "options", :force => true do |t|
     t.string "key"
     t.text   "value"
+  end
+
+  create_table "races", :force => true do |t|
+    t.date    "race_date"
+    t.string  "title"
+    t.string  "title2"
+    t.text    "description"
+    t.text    "how_it_workd"
+    t.text    "rules"
+    t.text    "map_embed_url"
+    t.integer "status"
+    t.text    "eventioz_link"
   end
 
   create_table "users", :force => true do |t|
