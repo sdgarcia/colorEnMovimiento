@@ -6,5 +6,25 @@
 
 
 
+  <table class="table table-striped">
+    <tr>
+      <th>Carrera</th>
+      <th>Fecha</th>
+      <th>Estado</th>
+      <th></th>
+    </tr>
+
+  <% @races.each do |race| %>
+    <tr>
+      <td><%= race.title %></td>
+      <td><%= l race.race_date, :format => "%d/%m/%Y" %></td>
+      <td><%= race.status_s %></td>
+      <td><%= link_to 'Editar', "/races/editar/" + race.id.to_s, :class => "btn" %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <a href="/races/nueva" class="btn"><i class="icon-plus"></i> Nueva carrera</a>
+
 
 </body>

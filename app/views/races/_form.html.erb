@@ -1,0 +1,44 @@
+<%= form_for(@race, :url => "") do |f| %>
+
+
+	<p><%= f.label :title, "Nombre de la carrera" %><br/>
+		<%= f.text_field :title, :class => "input-large" %>
+	</p>
+
+	<p><%= f.label :race_date, "Fecha" %><br/>
+		<%= f.date_select :race_date, {}, :style => "width:100px" %>
+	</p>
+
+	<p><%= f.label :title2, "Título" %><br/>
+		<%= f.text_field :title2, :class => "input-xlarge" %>
+	</p>
+
+	<p><%= f.label :description, "Bajada" %><br/>
+		<%= f.text_area :description, :style => "width:500px; height:50px" %>
+	</p>
+
+	<p><%= f.label :how_it_workd, "¿Cómo funciona?" %><br/>
+		<%= f.text_area :how_it_workd, :style => "width:500px; height:50px" %>
+	</p>
+
+	<p><%= f.label :rules, "Reglas" %><br/>
+		<%= f.text_area :rules, :style => "width:500px; height:50px" %>
+	</p>
+
+	<p><%= f.label :map_embed_url, "Mapa (HTML de embed de Google Maps)" %><br/>
+		<%= f.text_area :map_embed_url, :style => "width:500px; height:50px" %>
+	</p>
+
+	<p><%= f.label :eventioz_link, "Link de inscripción en Eventioz" %><br/>
+		<%= f.text_field :eventioz_link, :class => "input-xlarge" %>
+	</p>
+
+	<p><%= f.label :status, "Estado" %><br/>
+		<%= f.select :status, [["Borrador", 0], ["Publicada", 1], ["Agotada", 2], ["Finalizada", 3]] %>
+	</p>
+
+	<p>
+		<%= f.submit "Guardar", :class => "btn btn-primary" %>
+	</p>
+	<br/><br/>
+<% end %>

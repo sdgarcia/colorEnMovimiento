@@ -1,6 +1,6 @@
 class Race < ActiveRecord::Base
 
-	attr_accessible :title, :title2, :descripcion, :how_it_workd, :rules, :map_embed_url, :status, :eventioz_link
+	attr_accessible :race_date, :title, :title2, :description, :how_it_workd, :rules, :map_embed_url, :status, :eventioz_link
 
 	validates_presence_of :title, :title2, :race_date
 
