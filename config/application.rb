@@ -46,6 +46,15 @@ module ColorEnMovimiento
 
     config.i18n.default_locale = :es
 
+    config.paperclip_defaults = {
+    :storage => :s3,
+      :s3_credentials => {
+        :bucket => 'colorenmovimiento',
+        :access_key_id => 'AKIAJC2KNCPJC7QLJPLQ',
+        :secret_access_key => 'BT8tYQRPywY3dQcmBFJFgT+fsRPFsM7EoKeKcwnO'
+    }
+  }
+
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

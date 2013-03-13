@@ -6,6 +6,8 @@ gem 'omniauth-google'
 gem 'bootstrap-sass', '2.1'
 
 gem 'google_drive'
+gem 'paperclip'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
