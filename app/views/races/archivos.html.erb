@@ -1,0 +1,30 @@
+<body style="margin-top:120px">
+
+<i class="icon-trophy icon-2x pull-left icon-border"></i>
+<h3>Archivos de la carrera</h3>
+<br clear="all" /><br/>
+
+<%= form_for(@race, :url => "", :html => { :multipart => true }) do |f| %>
+
+	<p><%= f.label :docs, "Documentos de la carrera" %><br/>
+		<% #if @race.docs.present? %>
+			<%= link_to "Abrir archivo", @race.docs.url %><br/>
+		<% #end %>
+		<%= f.file_field :docs, :class => "input-large" %>
+	</p>
+
+	<p>
+	<%= f.submit "Guardar", :class => "btn btn-primary" %>
+	</p>
+
+	<br/>
+
+<% end %>
+
+<h3>Sponsors</h3>
+
+
+<h3>Caridad</h3>
+
+</body>
+

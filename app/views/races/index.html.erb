@@ -19,7 +19,10 @@
       <td><%= race.title %></td>
       <td><%= l race.race_date, :format => "%d/%m/%Y" %></td>
       <td><%= race.status_s %></td>
-      <td><%= link_to 'Editar', "/races/editar/" + race.id.to_s, :class => "btn" %></td>
+      <td>
+        <%= link_to 'Editar', "/races/editar/" + race.id.to_s, :class => "btn" %>
+        <%= link_to "Archivos", "/races/archivos/" + race.id.to_s, :class => "btn" %>
+      </td>
     </tr>
   <% end %>
   </table>

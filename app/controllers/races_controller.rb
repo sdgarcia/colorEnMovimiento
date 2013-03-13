@@ -31,4 +31,17 @@ class RacesController < ApplicationController
   	end
   end
 
+  def archivos
+    @race = Race.find(params[:id])
+
+    if params[:race]
+      if @race.update_attributes(params[:race])
+        flash[:notice] = "Datos guardado"
+      else
+        flash[:alert] = "Error al guardar los datos"
+      end
+    end
+
+  end #archivos
+
 end
