@@ -5,4 +5,5 @@ class Charity < ActiveRecord::Base
 	has_attached_file :img, styles: {
 	    thumb: '200x150>'
 	 }
+	attr_accessible :img, :race_id
 end

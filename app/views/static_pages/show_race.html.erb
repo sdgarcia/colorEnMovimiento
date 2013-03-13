@@ -61,17 +61,9 @@
         <div id="caridad">
             <h5>Caridad</h5>
             <ul>
-            	<li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            
-            <ul>
-            	<li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <% @race.charities.each{ |c| %>
+                    <li><%= image_tag c.img.url(:thumb) %></li>
+                <% } %>
             </ul>
         </div><!--CARIDAD-->
     <% end %>
@@ -80,37 +72,33 @@
 
         <div id="sponsors">
             <h5>Sponsors</h5>
-            <ul>
-            	<h6>Main Sponsor</h6>
-            	<li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            
-            <ul>
-            	<h6>Paid Sponsor</h6>
-            	<li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            
-            <ul>
-            	<h6>Friend Sponsor</h6>
-            	<li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            
-            <ul>
-            	<h6>Friend Sponsor</h6>
-            	<li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <% if @race.sponsors.where(:xtype => 1).size > 0 %>
+                <ul>
+                	<h6>Main Sponsor</h6>
+                    <% @race.sponsors.where(:xtype => 1).each{ |s| %>
+                        <li><%= image_tag s.img.url(:thumb) %></li>
+                    <% } %>
+                </ul>
+            <% end %>
+
+            <% if @race.sponsors.where(:xtype => 2).size > 0 %>
+                <ul>
+                    <h6>Paid Sponsor</h6>
+                    <% @race.sponsors.where(:xtype => 2).each{ |s| %>
+                        <li><%= image_tag s.img.url(:thumb) %></li>
+                    <% } %>
+                </ul>
+            <% end %>
+
+            <% if @race.sponsors.where(:xtype => 3).size > 0 %>
+                <ul>
+                    <h6>Friend Sponsor</h6>
+                    <% @race.sponsors.where(:xtype => 3).each{ |s| %>
+                        <li><%= image_tag s.img.url(:thumb) %></li>
+                    <% } %>
+                </ul>
+            <% end %>
+
         </div><!--SPONSORS-->
     <% end %>
 

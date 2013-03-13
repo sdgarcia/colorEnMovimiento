@@ -20,9 +20,6 @@
 		<%= f.file_field :header, :class => "input-large" %>
 	</p>
 
-
-
-
 	<p>
 	<%= f.submit "Guardar", :class => "btn btn-primary" %>
 	</p>
@@ -33,10 +30,90 @@
 
 <br clear="all" /><br/>
 
-<h3>Sponsors</h3>
+<h3>Sponsors</h3><br/><br/>
 
 
-<h3>Caridad</h3>
+<table class="table table-striped">
+	<tbody>
+		<tr>
+			<td>Main Sponsor</td>
+			<td>
+				<% @race.sponsors.where(:xtype => 1).each{ |s| %>
+					<div class="pull-left" style="width:220px;">
+						<%= image_tag s.img.url(:thumb) %> <br/>
+						<button onclick="if(confirm('¿Seguro de eliminar?')) window.location='?delete_sponsor=<%= s.id %>';" class="btn btn-danger">Eliminar</button>
+					</div>
+				<% } %>
+			</td>
+			<td style="width:200px">
+				<%= form_for(@sponsor, :url => "", :html => {:multipart => true}) do |f| %>
+					<%= f.hidden_field :xtype, :value => 1 %>
+					<%= f.file_field :img , :style => "width:200px" %><br/>
+					<%= f.submit "Guardar", :class => "btn btn-primary" %>
+				<% end %>
+			</td>
+		</tr>
 
+		<tr>
+			<td>Paid Sponsor</td>
+			<td>
+				<% @race.sponsors.where(:xtype => 2).each{ |s| %>
+					<div class="pull-left" style="width:220px;">
+						<%= image_tag s.img.url(:thumb) %> <br/>
+						<button onclick="if(confirm('¿Seguro de eliminar?')) window.location='?delete_sponsor=<%= s.id %>';" class="btn btn-danger">Eliminar</button>
+					</div>
+				<% } %>
+			</td>
+			<td style="width:200px">
+				<%= form_for(@sponsor, :url => "", :html => {:multipart => true}) do |f| %>
+					<%= f.hidden_field :xtype, :value => 2 %>
+					<%= f.file_field :img , :style => "width:200px" %><br/>
+					<%= f.submit "Guardar", :class => "btn btn-primary" %>
+				<% end %>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Friend Sponsor</td>
+			<td>
+				<% @race.sponsors.where(:xtype => 3).each{ |s| %>
+					<div class="pull-left" style="width:220px;">
+						<%= image_tag s.img.url(:thumb) %> <br/>
+						<button onclick="if(confirm('¿Seguro de eliminar?')) window.location='?delete_sponsor=<%= s.id %>';" class="btn btn-danger">Eliminar</button>
+					</div>
+				<% } %>
+			</td>
+			<td style="width:200px">
+				<%= form_for(@sponsor, :url => "", :html => {:multipart => true}) do |f| %>
+					<%= f.hidden_field :xtype, :value => 3 %>
+					<%= f.file_field :img , :style => "width:200px" %><br/>
+					<%= f.submit "Guardar", :class => "btn btn-primary" %>
+				<% end %>
+			</td>
+		</tr>
+
+	</tbody>
+</table>
+
+
+<h3>Caridad</h3><br/><br/>
+
+<% @race.charities.each{ |c| %>
+	<div class="pull-left" style="width:220px">
+		<%= image_tag c.img.url(:thumb) %> <br/>
+		<button onclick="if(confirm('¿Seguro de eliminar?')) window.location='?delete_charity=<%= c.id %>';" class="btn btn-danger">Eliminar</button>
+	</div>
+<% } %>
+<br clear="all" /><br/>
+	<div class="pull-left" style="width:220px">
+		<strong>Nueva</strong>
+		<%= form_for(@charity, :url => "", :html => {:multipart => true}) do |f| %>
+			<%= f.file_field :img %>
+			<br/>
+			<%= f.submit "Guardar", :class => "btn btn-primary" %>
+		<% end %>
+	</div>
+
+	<br clear="all" />
+<br/><br/>
 </body>
-

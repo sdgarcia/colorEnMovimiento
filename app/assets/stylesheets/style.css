@@ -884,7 +884,7 @@ div.locations_table a:hover {
 
 #caridad ul, #sponsors ul {
 	width: 900px;
-	margin: 25px auto;	
+	margin: 25px auto 0px;	
 }
 
 #caridad ul li, #sponsors ul li {
@@ -892,6 +892,7 @@ div.locations_table a:hover {
 	height: 150px;
 	margin-right: 10px;
 	margin-left: 10px;
+	margin-bottom: 25px;
 	background: black;
 	display: inline-block;
 }
