@@ -35,15 +35,23 @@ ActiveRecord::Schema.define(:version => 20130313190454) do
   end
 
   create_table "races", :force => true do |t|
-    t.date    "race_date"
-    t.string  "title"
-    t.string  "title2"
-    t.text    "description"
-    t.text    "how_it_workd"
-    t.text    "rules"
-    t.text    "map_embed_url"
-    t.integer "status"
-    t.text    "eventioz_link"
+    t.date     "race_date"
+    t.string   "title"
+    t.string   "title2"
+    t.text     "description"
+    t.text     "how_it_workd"
+    t.text     "rules"
+    t.text     "map_embed_url"
+    t.integer  "status"
+    t.text     "eventioz_link"
+    t.string   "docs_file_name"
+    t.string   "docs_content_type"
+    t.integer  "docs_file_size"
+    t.datetime "docs_updated_at"
+    t.string   "header_file_name"
+    t.string   "header_content_type"
+    t.integer  "header_file_size"
+    t.datetime "header_updated_at"
   end
 
   create_table "sponsors", :force => true do |t|
@@ -53,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20130313190454) do
     t.string   "img_content_type"
     t.integer  "img_file_size"
     t.datetime "img_updated_at"
+    t.integer  "type"
   end
 
   create_table "users", :force => true do |t|
