@@ -1,6 +1,10 @@
 class Race < ActiveRecord::Base
 
-	attr_accessible :race_date, :title, :title2, :description, :how_it_workd, :rules, :map_embed_url, :status, :eventioz_link, :docs
+	has_attached_file :docs 
+	has_attached_file :header, styles: { header: '940x174>' }
+
+	attr_accessible :docs, :header,
+		:race_date, :title, :title2, :description, :how_it_workd, :rules, :map_embed_url, :status, :eventioz_link
 
 	validates_presence_of :title, :title2, :race_date
 
@@ -20,6 +24,6 @@ class Race < ActiveRecord::Base
 		end
 	end
 
-	has_attached_file :docs
+	
 
 end
