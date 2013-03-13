@@ -22,9 +22,15 @@
     <div class="raceNav">
     	<ul>
         	<li><a href="#info">Info</a></li>
-            <li><a href="#mapa">Mapa</a></li>
-            <li><a href="#caridad">Caridad</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
+            <% if @race.map_embed_url.present? %>
+                <li><a href="#mapa">Mapa</a></li>
+            <% end %>
+            <% if @race.charities.size > 0 %>
+                <li><a href="#caridad">Caridad</a></li>
+            <% end %>
+            <% if @race.sponsors.size > 0 %>
+                <li><a href="#sponsors">Sponsors</a></li>
+            <% end %>
             <li><a href="/inscripcion#voluntarios102">Voluntariado</a></li>
             <li class="inscribiteBtn"><a href="<%= @race.eventioz_link %>" target="_blank">¡Inscribite!</a></li>
         </ul>
@@ -44,62 +50,69 @@
 
     </div><!--INFO-->
     
-    <div id="mapa">
-    	<h5>Recorrido</h5>
-        <iframe width="900" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<%= raw @race.map_embed_url %>"></iframe>
-    </div><!--MAPA-->
+    <% if @race.map_embed_url.present? %>
+        <div id="mapa">
+        	<h5>Recorrido</h5>
+            <iframe width="900" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<%= raw @race.map_embed_url %>"></iframe>
+        </div><!--MAPA-->
+    <% end %>
     
-    <div id="caridad">
-        <h5>Caridad</h5>
-        <ul>
-        	<li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        
-        <ul>
-        	<li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div><!--CARIDAD-->
+    <% if @race.charities.size > 0 %>
+        <div id="caridad">
+            <h5>Caridad</h5>
+            <ul>
+            	<li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            
+            <ul>
+            	<li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div><!--CARIDAD-->
+    <% end %>
     
-    <div id="sponsors">
-        <h5>Sponsors</h5>
-        <ul>
-        	<h6>Main Sponsor</h6>
-        	<li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        
-        <ul>
-        	<h6>Paid Sponsor</h6>
-        	<li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        
-        <ul>
-        	<h6>Friend Sponsor</h6>
-        	<li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        
-        <ul>
-        	<h6>Friend Sponsor</h6>
-        	<li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div><!--SPONSORS-->
+    <% if @race.sponsors.size > 0 %>
+
+        <div id="sponsors">
+            <h5>Sponsors</h5>
+            <ul>
+            	<h6>Main Sponsor</h6>
+            	<li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            
+            <ul>
+            	<h6>Paid Sponsor</h6>
+            	<li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            
+            <ul>
+            	<h6>Friend Sponsor</h6>
+            	<li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            
+            <ul>
+            	<h6>Friend Sponsor</h6>
+            	<li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div><!--SPONSORS-->
+    <% end %>
 
 <div id="footer">
     <div class="pdf">
