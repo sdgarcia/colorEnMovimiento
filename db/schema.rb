@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130306160232) do
+ActiveRecord::Schema.define(:version => 20130313190454) do
+
+  create_table "charities", :force => true do |t|
+    t.integer  "race_id"
+    t.integer  "order"
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
+  end
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -35,6 +44,15 @@ ActiveRecord::Schema.define(:version => 20130306160232) do
     t.text    "map_embed_url"
     t.integer "status"
     t.text    "eventioz_link"
+  end
+
+  create_table "sponsors", :force => true do |t|
+    t.integer  "race_id"
+    t.integer  "order"
+    t.string   "img_file_name"
+    t.string   "img_content_type"
+    t.integer  "img_file_size"
+    t.datetime "img_updated_at"
   end
 
   create_table "users", :force => true do |t|
