@@ -18,7 +18,7 @@
 
 
 <div id="race">
-    <img src="/assets/vlopez.jpg" width="940" height="174" />
+    <img src="<%= @race.header.url(:header) %>" width="940" height="174" />
     <div class="raceNav">
     	<ul>
         	<li><a href="#info">Info</a></li>
@@ -103,7 +103,9 @@
 
 <div id="footer">
     <div class="pdf">
-        <img src="/assets/download.png" width="452" height="130"  />
+        <a href="<%= @race.docs.url %>" target="_blank">
+            <img src="/assets/download.png" width="452" height="130"  />
+        </a>
     </div><!--PDF--> 
     <div class="inscribite2">
         <a href="<%= @race.eventioz_link %>" target="_blank"><img src="/assets/inscribite2.png" width="452" height="130"  /></a>
