@@ -55,7 +55,7 @@
 		</tr>
 
 		<tr>
-			<td>Paid Sponsor</td>
+			<td>Color Sponsor</td>
 			<td>
 				<% @race.sponsors.where(:xtype => 2).each{ |s| %>
 					<div class="pull-left" style="width:220px;">
@@ -74,7 +74,7 @@
 		</tr>
 
 		<tr>
-			<td>Friend Sponsor</td>
+			<td>City Sponsor</td>
 			<td>
 				<% @race.sponsors.where(:xtype => 3).each{ |s| %>
 					<div class="pull-left" style="width:220px;">
@@ -96,7 +96,7 @@
 </table>
 
 
-<h3>Caridad</h3><br/><br/>
+<h3>ONG Aliadas</h3><br/><br/>
 
 <% @race.charities.each{ |c| %>
 	<div class="pull-left" style="width:220px">

@@ -26,7 +26,7 @@
                 <li><a href="#mapa">Mapa</a></li>
             <% end %>
             <% if @race.charities.size > 0 %>
-                <li><a href="#caridad">Caridad</a></li>
+                <li><a href="#caridad">ONG Aliadas</a></li>
             <% end %>
             <% if @race.sponsors.size > 0 %>
                 <li><a href="#sponsors">Sponsors</a></li>
@@ -57,17 +57,6 @@
         </div><!--MAPA-->
     <% end %>
     
-    <% if @race.charities.size > 0 %>
-        <div id="caridad">
-            <h5>Caridad</h5>
-            <ul>
-                <% @race.charities.each{ |c| %>
-                    <li><%= image_tag c.img.url(:thumb) %></li>
-                <% } %>
-            </ul>
-        </div><!--CARIDAD-->
-    <% end %>
-    
     <% if @race.sponsors.size > 0 %>
 
         <div id="sponsors">
@@ -83,7 +72,7 @@
 
             <% if @race.sponsors.where(:xtype => 2).size > 0 %>
                 <ul>
-                    <h6>Paid Sponsor</h6>
+                    <h6>Color Sponsor</h6>
                     <% @race.sponsors.where(:xtype => 2).each{ |s| %>
                         <li><%= image_tag s.img.url(:thumb) %></li>
                     <% } %>
@@ -92,7 +81,7 @@
 
             <% if @race.sponsors.where(:xtype => 3).size > 0 %>
                 <ul>
-                    <h6>Friend Sponsor</h6>
+                    <h6>City Sponsor</h6>
                     <% @race.sponsors.where(:xtype => 3).each{ |s| %>
                         <li><%= image_tag s.img.url(:thumb) %></li>
                     <% } %>
@@ -100,6 +89,17 @@
             <% end %>
 
         </div><!--SPONSORS-->
+    <% end %>
+
+    <% if @race.charities.size > 0 %>
+        <div id="caridad">
+            <h5>ONG Aliadas</h5>
+            <ul>
+                <% @race.charities.each{ |c| %>
+                    <li><%= image_tag c.img.url(:thumb) %></li>
+                <% } %>
+            </ul>
+        </div><!--CARIDAD-->
     <% end %>
 
 <div id="footer">
