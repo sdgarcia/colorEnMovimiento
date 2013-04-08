@@ -954,7 +954,7 @@ div.locations_table a:hover {
 	right: 0;
 }
 
-#frase .inscribiteBtn a {
+#frase .inscribiteBtn a, #inscribiteBtnLista a {
 	font-family: 'freeroadregular',Arial,Helvetica,sans-serif;
 	color: #FFF;
 	text-align: center;
@@ -965,6 +965,11 @@ div.locations_table a:hover {
 	border-radius: 5px;
 }
 
-#frase .inscribiteBtn a:hover {
+#frase .inscribiteBtn a:hover, #inscribiteBtnLista a:hover {
 	background: #87ab05;
 }
+
+ #inscribiteBtnLista a{
+ 	padding: 10px 20px;
+ 	height:40px;
+ }
