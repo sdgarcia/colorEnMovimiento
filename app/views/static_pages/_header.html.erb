@@ -7,8 +7,7 @@
     	<li class="hov"> <%= link_to "video", a_home + "#video10" %> </li>
     	<li class="hov"> <%= link_to "Qué es", a_home + "#que10" %> </li>
     	<li class="hov"> <%= link_to "Por qué lo hacemos", a_home + "#porque10" %> </li>
-        <li class="hov"> <%= link_to "Inscribite", "/carreras/1" %> </li>
-            <% # a_inscripcion.present? ? a_inscripcion : "#wrap"  %>
+        <li class="hov"> <%= link_to "Inscribite",  a_inscripcion.present? ? a_inscripcion : "#wrap" %> </li>
     	<li class="hov"> <%= link_to "Voluntarios", a_inscripcion + "#voluntarios102" %> </li>
     	<li class="hov"> <%= link_to "FAQ", a_home + "#faq10" %> </li>
     	<li class="hov"> <%= link_to "Contacto", a_home + "#contacto10" %> </li>
