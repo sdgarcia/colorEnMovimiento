@@ -27,7 +27,7 @@
 				  <% @races.each do |race| %>
 				    <tr>
 				      <td><a href="/carreras/<%= race.id %>" %><%= race.title %></a></td>
-				      <td><%= l race.race_date, :format => "%d de %B, %Y" %></td>
+				      <td><%= if race.race_date then l race.race_date, :format => "%d de %B, %Y" else "A confirmar" end %></td>
 				      <td style="height:40px">
 						<div id="inscribiteBtnLista">
 				      		<a href="/carreras/<%= race.id %>" %><%= race.status_s.upcase %></a>

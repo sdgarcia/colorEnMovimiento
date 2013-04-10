@@ -6,7 +6,7 @@ class Race < ActiveRecord::Base
 	attr_accessible :docs, :header,
 		:race_date, :title, :title2, :description, :how_it_workd, :rules, :map_embed_url, :status, :eventioz_link
 
-	validates_presence_of :title, :title2, :race_date
+	validates_presence_of :title, :title2 
 
 	has_many :sponsors
 	has_many :charities

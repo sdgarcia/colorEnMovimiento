@@ -17,7 +17,7 @@
   <% @races.each do |race| %>
     <tr>
       <td><%= race.title %></td>
-      <td><%= l race.race_date, :format => "%d/%m/%Y" %></td>
+      <td><%= if race.race_date then l race.race_date, :format => "%d/%m/%Y" else "A confirmar" end %></td>
       <td><%= race.status_s %></td>
       <td>
         <%= link_to 'Editar', "/races/editar/" + race.id.to_s, :class => "btn" %>
