@@ -26,6 +26,13 @@ class VotesAdminController < VotesController
 
   def detail
     @city = City.find(params[:id])
+    
+    if params[:delete_vote].present?
+      Vote.find_by_id(params[:delete_vote]).destroy      
+      redirect_to "/votes_admin/" + @city.id.to_s
+      return
+    end
+
     @votes = Vote.where("city_id =?",params[:id].to_i )
 
     respond_to do |format|

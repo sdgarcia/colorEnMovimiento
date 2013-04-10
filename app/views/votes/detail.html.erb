@@ -4,16 +4,24 @@
 </br>	
 <div class="table table-striped">
   <table>
-  	<tr>
-  		<th>Email</th>
-  		<th>Otra<th>
-  	</tr>
-  	<% @votes.each do |vote| %>
-	<tr>
-		<td><%= vote.email %></td>
-		<td><%= vote.other %></td>
-	</tr>
-	<% end %>
+    <thead>
+    	<tr>
+    		<th>Email</th>
+    		<th>Otra<th>
+        <th>&nbsp;</th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<% @votes.each do |vote| %>
+        <tr>
+        	<td><%= vote.email %></td>
+        	<td><%= vote.other %></td>
+          <td>
+            <button class="btn btn-danger btn-small" onclick="window.location='?delete_vote=<%= vote.id %>' ;">Eliminar</button>
+          </td>
+        </tr>
+  	  <% end %>
+    </tbody>
   </table>
 </div>
 </body>
