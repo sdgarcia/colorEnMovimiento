@@ -23,7 +23,7 @@ class StaticPagesController < ApplicationController
 
     @volunteer = Volunteer.new
 
-    @races = Race.where(:status => [1,2,3]).order(:race_date)
+    @races = Race.where(:status => [1,2,3,4]).order(:race_date)
     
   end #inscripcion
 

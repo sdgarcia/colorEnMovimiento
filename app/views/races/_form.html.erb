@@ -34,11 +34,11 @@
 	</p>
 
 	<p><%= f.label :status, "Estado" %><br/>
-		<%= f.select :status, [["Borrador", 0], ["Publicada", 1], ["Agotada", 2], ["Finalizada", 3]] %>
+		<%= f.select :status, [["Borrador", 0], ["Publicada", 1], ["Agotada", 2], ["Finalizada", 3], ["Próximamente lista VIP", 4]] %>
 	</p>
 
 	<p>
 		<%= f.submit "Guardar", :class => "btn btn-primary" %>
 	</p>
-	<br/><br/>
+	<br/><br/>&nbsp;<br/><br/>
 <% end %>

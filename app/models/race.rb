@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Race < ActiveRecord::Base
 
 	has_attached_file :docs 
@@ -21,6 +22,8 @@ class Race < ActiveRecord::Base
 				"Agotada"
 			when 3
 				"Finalizada"
+			when 4
+				"Próximamente lista VIP"
 		end
 	end
 
