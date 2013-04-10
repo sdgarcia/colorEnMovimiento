@@ -2,7 +2,7 @@ class VolunteersController < ApplicationController
 
 	def new
 		volunteer = Volunteer.new(params[:volunteer])
-		
+
 		if volunteer.save
 			render :text => "alert('Tu solicitud se ha enviado!');"
 		else

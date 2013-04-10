@@ -135,8 +135,23 @@
 					</div>
 				<% end #form 
 				%>
+
+		<script type="text/javascript">
+		jQuery(function(){
+		  jQuery('#new_volunteer').on('ajax:complete', function(evt,xhr,status){
+		    jQuery("#new_volunteer button.form-submit-button")[0].disabled=false;
+		    jQuery("#new_volunteer button.form-submit-button").html("Enviar"); 
+		  });
+		  jQuery("#new_volunteer").on("ajax:beforeSend", function(){ 
+		    jQuery("#new_volunteer button.form-submit-button")[0].disabled=true;
+		    jQuery("#new_volunteer button.form-submit-button").html("Enviando..."); 
+		  })
+		});
+		</script>
+
 		</div><!--VOLUNTARIOS-->
 	        
+
 
 
 	<ul>
