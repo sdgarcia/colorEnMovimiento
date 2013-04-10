@@ -62,7 +62,10 @@ class RacesController < ApplicationController
       @race.save!
       redirect_to("/races/archivos/" + @race.id.to_s)
     end
-
+    if params[:sponsor_link].present?
+      Sponsor.find(params[:sponsor_link]).update_attribute(:link_url, params[:value])
+      redirect_to("/races/archivos/" + @race.id.to_s)
+    end
 
   end #archivos
 

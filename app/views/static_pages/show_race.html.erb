@@ -65,7 +65,11 @@
                 <ul>
                 	<h6><%= @race.sponsor_type_name(1) %> Sponsor</h6>
                     <% @race.sponsors.where(:xtype => 1).each{ |s| %>
-                        <li><%= image_tag s.img.url(:thumb) %></li>
+                        <li>
+                            <% if s.link_url.present? %><a href="http://<%= s.link_url %>" target="_blank"><% end %>
+                            <%= image_tag s.img.url(:thumb) %>
+                            <% if s.link_url.present? %></a><% end %>
+                        </li>
                     <% } %>
                 </ul>
             <% end %>
@@ -74,7 +78,11 @@
                 <ul>
                     <h6><%= @race.sponsor_type_name(2) %> Sponsor</h6>
                     <% @race.sponsors.where(:xtype => 2).each{ |s| %>
-                        <li><%= image_tag s.img.url(:thumb) %></li>
+                        <li>
+                            <% if s.link_url.present? %><a href="http://<%= s.link_url %>" target="_blank"><% end %>
+                            <%= image_tag s.img.url(:thumb) %>
+                            <% if s.link_url.present? %></a><% end %>
+                        </li>
                     <% } %>
                 </ul>
             <% end %>
@@ -83,7 +91,11 @@
                 <ul>
                     <h6><%= @race.sponsor_type_name(3) %> Sponsor</h6>
                     <% @race.sponsors.where(:xtype => 3).each{ |s| %>
-                        <li><%= image_tag s.img.url(:thumb) %></li>
+                        <li>
+                            <% if s.link_url.present? %><a href="http://<%= s.link_url %>" target="_blank"><% end %>
+                            <%= image_tag s.img.url(:thumb) %>
+                            <% if s.link_url.present? %></a><% end %>
+                        </li>
                     <% } %>
                 </ul>
             <% end %>

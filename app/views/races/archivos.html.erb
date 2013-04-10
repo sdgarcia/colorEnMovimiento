@@ -43,7 +43,10 @@
 				<% @race.sponsors.where(:xtype => 1).each{ |s| %>
 					<div class="pull-left" style="width:220px;">
 						<%= image_tag s.img.url(:thumb) %> <br/>
-						<button onclick="if(confirm('¿Seguro de eliminar?')) window.location='?delete_sponsor=<%= s.id %>';" class="btn btn-danger">Eliminar</button>
+						<div class="btn-group">
+							<button onclick="v = prompt('Ingrese link sin http', '<%= s.link_url %>'); window.location='?sponsor_link=<%= s.id %>&value=' + v; " class="btn">Link</button>
+							<button onclick="if(confirm('¿Seguro de eliminar?')) window.location='?delete_sponsor=<%= s.id %>';" class="btn btn-danger">Eliminar</button>
+						</div>
 					</div>
 				<% } %>
 			</td>
@@ -64,7 +67,10 @@
 				<% @race.sponsors.where(:xtype => 2).each{ |s| %>
 					<div class="pull-left" style="width:220px;">
 						<%= image_tag s.img.url(:thumb) %> <br/>
-						<button onclick="if(confirm('¿Seguro de eliminar?')) window.location='?delete_sponsor=<%= s.id %>';" class="btn btn-danger">Eliminar</button>
+						<div class="btn-group">
+							<button onclick="v = prompt('Ingrese link sin http', '<%= s.link_url %>'); window.location='?sponsor_link=<%= s.id %>&value=' + v; " class="btn">Link</button>
+							<button onclick="if(confirm('¿Seguro de eliminar?')) window.location='?delete_sponsor=<%= s.id %>';" class="btn btn-danger">Eliminar</button>
+						</div>
 					</div>
 				<% } %>
 			</td>
@@ -85,7 +91,10 @@
 				<% @race.sponsors.where(:xtype => 3).each{ |s| %>
 					<div class="pull-left" style="width:220px;">
 						<%= image_tag s.img.url(:thumb) %> <br/>
-						<button onclick="if(confirm('¿Seguro de eliminar?')) window.location='?delete_sponsor=<%= s.id %>';" class="btn btn-danger">Eliminar</button>
+						<div class="btn-group">
+							<button onclick="v = prompt('Ingrese link sin http', '<%= s.link_url %>'); window.location='?sponsor_link=<%= s.id %>&value=' + v; " class="btn">Link</button>
+							<button onclick="if(confirm('¿Seguro de eliminar?')) window.location='?delete_sponsor=<%= s.id %>';" class="btn btn-danger">Eliminar</button>
+						</div>
 					</div>
 				<% } %>
 			</td>
