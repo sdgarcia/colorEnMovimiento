@@ -38,15 +38,15 @@
     
     <h4><%= @race.title2 %></h4>
     
-    <p><%= @race.description %></p>
+    <p><%= raw @race.description %></p>
     
     <div id="info">
         <h5>¿C&oacute;mo funciona?</h5>
-        <p><%= @race.how_it_workd %></p>
+        <p><%= raw @race.how_it_workd %></p>
         
         <h5>Reglas de la carrera</h5>
         
-        <p><%= @race.rules %></p>
+        <p><%= raw @race.rules %></p>
 
     </div><!--INFO-->
     

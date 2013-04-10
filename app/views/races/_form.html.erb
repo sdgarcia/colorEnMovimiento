@@ -13,6 +13,16 @@
 		<%= f.text_field :title2, :class => "input-xlarge" %>
 	</p>
 
+<script src="/assets/ckeditor/ckeditor.js" type="text/javascript"></script>
+<script type="text/javascript">
+	jQuery(function(){
+		CKEDITOR.replace( 'race_description', {});
+		CKEDITOR.replace( 'race_how_it_workd', {});
+		CKEDITOR.replace( 'race_rules', {});
+
+	})
+</script>
+
 	<p><%= f.label :description, "Bajada" %><br/>
 		<%= f.text_area :description, :style => "width:500px; height:50px" %>
 	</p>
@@ -24,6 +34,8 @@
 	<p><%= f.label :rules, "Reglas" %><br/>
 		<%= f.text_area :rules, :style => "width:500px; height:50px" %>
 	</p>
+
+
 
 	<p><%= f.label :map_embed_url, "Mapa (HTML de embed de Google Maps)" %><br/>
 		<%= f.text_area :map_embed_url, :style => "width:500px; height:50px" %>
