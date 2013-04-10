@@ -1,10 +1,10 @@
 class NotificationsMailer < ActionMailer::Base
-  default :from => "franco@colorenmovimiento.com"
+  default :from => "hola@colorenmovimiento.com"
   default :to => "hola@colorenmovimiento.com"
 
   def new_message(message)
     @message = message
-    mail(:subject => "ColorEnMovimiento #{message.subject} /#{(0...3).map{(65+rand(26)).chr}.join}")
+    mail(:subject => "ColorEnMovimiento #{message.subject} /#{(0...3).map{(65+rand(26)).chr}.join}", :to => "hola@colorenmovimiento.com")
   end
 
   def new_volunteer(volunteer)
