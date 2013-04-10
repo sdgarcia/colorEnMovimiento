@@ -63,7 +63,7 @@
             <h5>Sponsors</h5>
             <% if @race.sponsors.where(:xtype => 1).size > 0 %>
                 <ul>
-                	<h6>Main Sponsor</h6>
+                	<h6><%= @race.sponsor_type_name(1) %> Sponsor</h6>
                     <% @race.sponsors.where(:xtype => 1).each{ |s| %>
                         <li><%= image_tag s.img.url(:thumb) %></li>
                     <% } %>
@@ -72,7 +72,7 @@
 
             <% if @race.sponsors.where(:xtype => 2).size > 0 %>
                 <ul>
-                    <h6>Color Sponsor</h6>
+                    <h6><%= @race.sponsor_type_name(2) %> Sponsor</h6>
                     <% @race.sponsors.where(:xtype => 2).each{ |s| %>
                         <li><%= image_tag s.img.url(:thumb) %></li>
                     <% } %>
@@ -81,7 +81,7 @@
 
             <% if @race.sponsors.where(:xtype => 3).size > 0 %>
                 <ul>
-                    <h6>City Sponsor</h6>
+                    <h6><%= @race.sponsor_type_name(3) %> Sponsor</h6>
                     <% @race.sponsors.where(:xtype => 3).each{ |s| %>
                         <li><%= image_tag s.img.url(:thumb) %></li>
                     <% } %>

@@ -57,6 +57,11 @@ class RacesController < ApplicationController
       Sponsor.find(params[:delete_sponsor]).destroy
       redirect_to("/races/archivos/" + @race.id.to_s)
     end
+    if params[:sponsor_type].present?
+      @race.send("sponsor_type_" + params[:sponsor_type].to_s + "=", params[:value])
+      @race.save!
+      redirect_to("/races/archivos/" + @race.id.to_s)
+    end
 
 
   end #archivos

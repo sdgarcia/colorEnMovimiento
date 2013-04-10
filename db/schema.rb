@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130313190454) do
+ActiveRecord::Schema.define(:version => 20130410185516) do
 
   create_table "charities", :force => true do |t|
     t.integer  "race_id"
@@ -52,6 +52,9 @@ ActiveRecord::Schema.define(:version => 20130313190454) do
     t.string   "header_content_type"
     t.integer  "header_file_size"
     t.datetime "header_updated_at"
+    t.string   "sponsor_type_1"
+    t.string   "sponsor_type_2"
+    t.string   "sponsor_type_3"
   end
 
   create_table "sponsors", :force => true do |t|
@@ -62,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20130313190454) do
     t.integer  "img_file_size"
     t.datetime "img_updated_at"
     t.integer  "xtype"
+    t.string   "link_url"
   end
 
   create_table "users", :force => true do |t|
