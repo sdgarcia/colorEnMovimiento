@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130410185516) do
+ActiveRecord::Schema.define(:version => 20130412033406) do
 
   create_table "charities", :force => true do |t|
     t.integer  "race_id"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20130410185516) do
     t.string   "sponsor_type_1"
     t.string   "sponsor_type_2"
     t.string   "sponsor_type_3"
+    t.text     "price_description"
   end
 
   create_table "sponsors", :force => true do |t|

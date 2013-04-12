@@ -48,6 +48,11 @@
         
         <p><%= raw @race.rules %></p>
 
+        <% if @race.price_description.present? %>
+            <h5>Precio y entrega de kits</h5>
+            <p><%= raw @race.price_description %></p>
+        <% end %>
+
     </div><!--INFO-->
     
     <% if @race.map_embed_url.present? %>

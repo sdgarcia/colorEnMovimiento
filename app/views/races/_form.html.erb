@@ -19,6 +19,7 @@
 		CKEDITOR.replace( 'race_description', {});
 		CKEDITOR.replace( 'race_how_it_workd', {});
 		CKEDITOR.replace( 'race_rules', {});
+		CKEDITOR.replace( 'race_price_description', {});
 
 	})
 </script>
@@ -33,6 +34,10 @@
 
 	<p><%= f.label :rules, "Reglas" %><br/>
 		<%= f.text_area :rules, :style => "width:500px; height:50px" %>
+	</p>
+
+	<p><%= f.label :price_description, "Precio y entrega de kits" %><br/>
+		<%= f.text_area :price_description, :style => "width:500px; height:50px" %>
 	</p>
 
 

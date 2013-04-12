@@ -5,7 +5,7 @@ class Race < ActiveRecord::Base
 	has_attached_file :header, styles: { header: '940x174>' }
 
 	attr_accessible :docs, :header,
-		:race_date, :title, :title2, :description, :how_it_workd, :rules, :map_embed_url, :status, :eventioz_link, :sponsor_type_1, :sponsor_type_2, :sponsor_type_3
+		:race_date, :title, :title2, :description, :how_it_workd, :price_description, :rules, :map_embed_url, :status, :eventioz_link, :sponsor_type_1, :sponsor_type_2, :sponsor_type_3
 
 	validates_presence_of :title, :title2 
 
