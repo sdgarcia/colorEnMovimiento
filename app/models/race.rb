@@ -19,7 +19,7 @@ class Race < ActiveRecord::Base
 			when 1
 				"Publicada"
 			when 2
-				"Agotada"
+				"Agotado/Lista de espera"
 			when 3
 				"Finalizada"
 			when 4

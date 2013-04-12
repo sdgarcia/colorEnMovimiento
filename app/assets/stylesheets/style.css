@@ -972,6 +972,9 @@ div.locations_table a:hover {
 	background: #97be0c;
 	border-radius: 5px;
 }
+#inscribiteBtnLista a{
+	font-size:18px !important;
+}
 
 #frase .inscribiteBtn a:hover, #inscribiteBtnLista a:hover {
 	background: #87ab05;
