@@ -68,7 +68,7 @@
             <h5>Corren con nosotros</h5>
             <% if @race.sponsors.where(:xtype => 1).size > 0 %>
                 <ul>
-                	<h6><%= @race.sponsor_type_name(1) %> Sponsor</h6>
+                	<h6><%= @race.sponsor_type_name(1) %></h6>
                     <% @race.sponsors.where(:xtype => 1).each{ |s| %>
                         <li>
                             <% if s.link_url.present? %><a href="http://<%= s.link_url %>" target="_blank"><% end %>
@@ -81,7 +81,7 @@
 
             <% if @race.sponsors.where(:xtype => 2).size > 0 %>
                 <ul>
-                    <h6><%= @race.sponsor_type_name(2) %> Sponsor</h6>
+                    <h6><%= @race.sponsor_type_name(2) %></h6>
                     <% @race.sponsors.where(:xtype => 2).each{ |s| %>
                         <li>
                             <% if s.link_url.present? %><a href="http://<%= s.link_url %>" target="_blank"><% end %>
@@ -94,7 +94,7 @@
 
             <% if @race.sponsors.where(:xtype => 3).size > 0 %>
                 <ul>
-                    <h6><%= @race.sponsor_type_name(3) %> Sponsor</h6>
+                    <h6><%= @race.sponsor_type_name(3) %></h6>
                     <% @race.sponsors.where(:xtype => 3).each{ |s| %>
                         <li>
                             <% if s.link_url.present? %><a href="http://<%= s.link_url %>" target="_blank"><% end %>
