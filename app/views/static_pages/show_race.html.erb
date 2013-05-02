@@ -29,7 +29,7 @@
                 <li><a href="#caridad">ONG Aliadas</a></li>
             <% end %>
             <% if @race.sponsors.size > 0 %>
-                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#sponsors">Corren con nosotros</a></li>
             <% end %>
             <li><a href="/inscripcion#voluntarios102">Voluntariado</a></li>
             <li class="inscribiteBtn"><a href="<%= @race.eventioz_link %>" target="_blank">¡Inscribite!</a></li>
@@ -65,7 +65,7 @@
     <% if @race.sponsors.size > 0 %>
 
         <div id="sponsors">
-            <h5>Sponsors</h5>
+            <h5>Corren con nosotros</h5>
             <% if @race.sponsors.where(:xtype => 1).size > 0 %>
                 <ul>
                 	<h6><%= @race.sponsor_type_name(1) %> Sponsor</h6>
