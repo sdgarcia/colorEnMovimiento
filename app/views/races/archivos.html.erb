@@ -116,7 +116,11 @@
 <% @race.charities.each{ |c| %>
 	<div class="pull-left" style="width:220px">
 		<%= image_tag c.img.url(:thumb) %> <br/>
-		<button onclick="if(confirm('¿Seguro de eliminar?')) window.location='?delete_charity=<%= c.id %>';" class="btn btn-danger">Eliminar</button>
+		<div class="btn-group">
+			<button onclick="v = prompt('Ingrese link sin http', '<%= c.link_url %>'); window.location='?charity_link=<%= c.id %>&value=' + v; " class="btn">Link</button>
+			<button onclick="if(confirm('¿Seguro de eliminar?')) window.location='?delete_charity=<%= c.id %>';" class="btn btn-danger">Eliminar</button>
+		</div>
+		
 	</div>
 <% } %>
 <br clear="all" /><br/>

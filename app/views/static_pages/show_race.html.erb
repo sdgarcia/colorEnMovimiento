@@ -113,7 +113,9 @@
             <h5>ONG Aliadas</h5>
             <ul>
                 <% @race.charities.each{ |c| %>
-                    <li><%= image_tag c.img.url(:thumb) %></li>
+                    <% if c.link_url.present? %><a href="http://<%= c.link_url %>" target="_blank"><% end %>
+                        <li><%= image_tag c.img.url(:thumb) %></li>
+                    <% if c.link_url.present? %></a><% end %>
                 <% } %>
             </ul>
         </div><!--CARIDAD-->
