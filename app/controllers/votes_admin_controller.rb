@@ -29,7 +29,8 @@ class VotesAdminController < VotesController
     
     if params[:delete_vote].present?
       Vote.find_by_id(params[:delete_vote]).destroy      
-      redirect_to "/votes_admin/" + @city.id.to_s
+      #redirect_to "/votes_admin/" + @city.id.to_s
+      render :text => "OK", :content_type => "text/plain"
       return
     end
 

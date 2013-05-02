@@ -13,11 +13,11 @@
     </thead>
     <tbody>
     	<% @votes.each do |vote| %>
-        <tr>
+        <tr id="vote_<%= vote.id %>">
         	<td><%= vote.email %></td>
         	<td><%= vote.other %></td>
           <td>
-            <button class="btn btn-danger btn-small" onclick="window.location='?delete_vote=<%= vote.id %>' ;">Eliminar</button>
+            <button class="btn btn-danger btn-small" onclick="deleteVote(<%= vote.id %>);">Eliminar</button>
           </td>
         </tr>
   	  <% end %>
@@ -25,3 +25,17 @@
   </table>
 </div>
 </body>
+
+<script type="text/javascript">
+  var vote_id = "";
+function deleteVote(id){
+  vote_id = id;
+  jQuery.post("/votes_admin/<%= params[:id] %>", { delete_vote: id }, function(data){
+    jQuery("#vote_" + vote_id).hide();
+  });
+}
+
+</script>
+
+
+
